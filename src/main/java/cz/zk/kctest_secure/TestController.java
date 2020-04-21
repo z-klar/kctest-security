@@ -33,26 +33,26 @@ public class TestController {
     }
 
     @GetMapping(value = "/open")
-    @PreAuthorize("hasRole('rtl-user')")
+    @PreAuthorize("hasRole('rtl_user')")
     public String handleOpenGetRequest(Model model) {
         log.info("GET: /open");
         return ("GET om Open processed!!!");
     }
 
     @GetMapping(value = "/users")
-    @PreAuthorize("hasRole('rtl-user')")
+    @PreAuthorize("hasRole('rtl_user')")
     public String handleUserInfoRequest(Model model) {
         log.info("GET: /Users");
         return ("Ringo, George, Paul, John");
     }
 
     @GetMapping(value = "/users/id")
-    @PreAuthorize("hasRole('rtl-user')")
+    @PreAuthorize("hasRole('rtl_user')")
     public String handleUserId() {
         return  String.format("users/id: EmailVerified=%s", getEmailVerified());
     }
 
-    @PreAuthorize("hasRole('rtl-admin')")
+    @PreAuthorize("hasRole('rtl_admin')")
     @GetMapping(value = "/songs")
     public String handleSongsInfoRequest() {
         log.info("GET: /Songs");
