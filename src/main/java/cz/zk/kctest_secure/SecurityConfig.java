@@ -88,18 +88,18 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 /*
         http
                 .authorizeRequests()
-                .antMatchers("/users").hasAnyRole("rtl-user", "rtl-admin")
-                .antMatchers("/songs").hasRole("rtl-admin")
+                .antMatchers("/users").hasAnyRole("rtl_user", "rtl_admin")
+                .antMatchers("/songs").hasRole("rtl_admin")
                 .anyRequest().permitAll();
 
 
         http
                 .authorizeRequests()
-                .requestMatchers(new AntPathRequestMatcher("/users", "GET")).hasRole("rtl-user")
-                .requestMatchers(new AntPathRequestMatcher("/songs", "GET")).hasRole("rtl-admin")
-                .requestMatchers(new AntPathRequestMatcher("/songs", "DELETE")).hasRole("rtl-admin")
-                .requestMatchers(new AntPathRequestMatcher("/open", "PUT")).hasRole("rtl-admin")
-                .requestMatchers(new AntPathRequestMatcher("/open", "GET")).hasRole("rtl-admin")
+                .requestMatchers(new AntPathRequestMatcher("/users", "GET")).hasRole("rtl_user")
+                .requestMatchers(new AntPathRequestMatcher("/songs", "GET")).hasRole("rtl_admin")
+                .requestMatchers(new AntPathRequestMatcher("/songs", "DELETE")).hasRole("rtl_admin")
+                .requestMatchers(new AntPathRequestMatcher("/open", "PUT")).hasRole("rtl_admin")
+                .requestMatchers(new AntPathRequestMatcher("/open", "GET")).hasRole("rtl_admin")
                 .anyRequest().permitAll();
 */
 
